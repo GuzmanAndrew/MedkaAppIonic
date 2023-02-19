@@ -1,0 +1,19 @@
+<ion-content mode="ios" class="ion-padding">
+  <img class="logo-large" src="assets/logo-large.png" alt="Bmed Large Logo">
+  <h1>Registrarse</h1>
+  <form [formGroup]="registerForm" (ngSubmit)="handleRegister()">
+    <ion-input formControlName="nombres" type="text" placeholder="Nombres"></ion-input>
+    <ion-input formControlName="apellidos" type="text" placeholder="Apellidos"></ion-input>
+    <ion-input formControlName="edad" placeholder="Edad" type="number"></ion-input>
+    <ion-input formControlName="cedula" placeholder="Cédula" type="text"></ion-input>
+    <ion-input formControlName="direccion" placeholder="Dirección" type="text"></ion-input>
+    <ion-input formControlName="celular" placeholder="Teléfono" type="number"></ion-input>
+    <ion-input formControlName="email" type="email" placeholder="Correo"></ion-input>
+    <ion-input formControlName="nombreUsuario" type="text" placeholder="Nombre de usuario"></ion-input>
+    <ion-input formControlName="password" type="password" placeholder="Contraseña"></ion-input>
+    <button type="submit" [disabled]="!registerForm.valid" class="ion-hide">Crear cuenta</button>
+    <ion-button style="--background: #114058 !important" type="submit" [disabled]="!registerForm.valid" expand="block">
+      Crear cuenta
+    </ion-button>
+  </form>
+</ion-content>

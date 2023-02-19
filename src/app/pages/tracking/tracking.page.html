@@ -1,0 +1,95 @@
+<ion-header>
+  <app-custom-header [backButton]="true" defaultBackHref="/home" [title]="title"></app-custom-header>
+</ion-header>
+
+<ion-content mode="ios">
+  <app-center-layout *ngIf="loading; else loadedContent;">
+    <ion-spinner name="bubbles" color="medium"></ion-spinner>
+  </app-center-layout>
+  <ng-template #loadedContent>
+    <!-- Gráfica -->
+    
+    <canvas baseChart [chartType]="chartType" [datasets]="datasets" [labels]="labels" [options]="options"></canvas>
+    
+    <!-- Pdf -->
+    <!-- <div class="pdf">
+      <ion-button size="small" (click)="generatePdf()">
+        generar pdf
+        <ion-icon name="document-outline"></ion-icon>
+      </ion-button>
+    </div> -->
+    
+    <!-- Inputs -->
+
+    <!-- Frecuencia Cardiaca -->
+    <form *ngIf="page === 'frecuenciaCardiaca'" [formGroup]="fcForm" (ngSubmit)="save('frecuenciaCardiaca')">
+      <ion-item>
+        <ion-label position="stacked">Frecuencia (BMP)</ion-label>
+        <ion-input formControlName="frecuencia" placeholder="Ingrese valor" type="number"></ion-input>
+      </ion-item>
+      <!-- <button type="submit" [disabled]="!fcForm.valid" class="ion-hide">Guardar</button> -->
+      <div class="ion-padding">
+        <ion-button type="submit" [disabled]="!fcForm.valid">Guardar</ion-button>
+      </div>
+    </form>
+    
+    <!-- Presión arterial -->
+    <form *ngIf="page === 'presionArterial'" [formGroup]="paForm" (ngSubmit)="save('presionArterial')">
+      <ion-item>
+        <ion-label position="stacked">Sistólica</ion-label>
+        <ion-input formControlName="sistolica" placeholder="Ingrese valor" type="number"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Distólica</ion-label>
+        <ion-input formControlName="diastolica" placeholder="Ingrese valor" type="number"></ion-input>
+      </ion-item>
+      <!-- <button type="submit" [disabled]="!paForm.valid" class="ion-hide">Guardar</button> -->
+      <div class="ion-padding">
+        <ion-button type="submit" [disabled]="!paForm.valid">Guardar</ion-button>
+      </div>
+    </form>
+    
+    <!-- Temperatura corporal -->
+    <form *ngIf="page === 'temperaturaCorporal'" [formGroup]="tcForm" (ngSubmit)="save('temperaturaCorporal')">
+      <ion-item>
+        <ion-label position="stacked">Temperatura C°</ion-label>
+        <ion-input formControlName="temperatura" placeholder="Ingrese valor" type="number"></ion-input>
+      </ion-item>
+      <!-- <button type="submit" [disabled]="!tcForm.valid" class="ion-hide">Guardar</button> -->
+      <div class="ion-padding">
+        <ion-button type="submit" [disabled]="!tcForm.valid">Guardar</ion-button>
+      </div>
+    </form>
+    
+    <!-- Oxigeno sangre -->
+    <form *ngIf="page === 'oxigenoSangre'" [formGroup]="o2Form" (ngSubmit)="save('oxigenoSangre')">
+      <ion-item>
+        <ion-label position="stacked">Oxígeno°</ion-label>
+        <ion-input formControlName="oxigeno" placeholder="Ingrese valor" type="number"></ion-input>
+      </ion-item>
+      <!-- <button type="submit" [disabled]="!o2Form.valid" class="ion-hide">Guardar</button> -->
+      <div class="ion-padding">
+        <ion-button type="submit" [disabled]="!o2Form.valid">Guardar</ion-button>
+      </div>
+    </form>
+    
+    <!-- Tabla -->
+    <div *ngFor="let itemGroup of groupedData">
+      <!-- Etiqueta de la fecha -->
+      <ion-item-divider style="background-color: #114058;">
+        <ion-label style="color: white;">
+          {{itemGroup.title}}
+        </ion-label>
+      </ion-item-divider>
+      <!-- Items -->
+      <ion-item *ngFor="let item of itemGroup.items">
+        <ion-label>
+          {{item.displayValue}}
+        </ion-label>
+        <ion-note>
+          {{item.displayHour}}
+        </ion-note>
+      </ion-item>
+    </div>
+  </ng-template>
+</ion-content>

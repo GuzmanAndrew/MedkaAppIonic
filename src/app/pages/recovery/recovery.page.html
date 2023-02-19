@@ -1,0 +1,11 @@
+<ion-content mode="ios" class="ion-padding">
+  <img class="logo-large" src="assets/logo-bmedcompleto.png" alt="Bmed Large Logo">
+  <h1>Recuperar contraseña</h1>
+  <form [formGroup]="recoveryForm" (ngSubmit)="handleRecovery()">
+    <ion-input formControlName="email" type="email" placeholder="Correo"></ion-input>
+    <ion-input formControlName="password" type="password" placeholder="contraseña"></ion-input>
+    <ion-button type="submit" [disabled]="!recoveryForm.valid" expand="block" color="secondary">
+      Cambiar contraseña
+    </ion-button>
+  </form>
+</ion-content>

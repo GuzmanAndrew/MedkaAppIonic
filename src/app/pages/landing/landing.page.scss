@@ -1,0 +1,60 @@
+ion-slide h2 {
+  color: var(--ion-color-tertiary);
+  font-size: 19px;
+  position: relative;
+  top: 47px;
+}
+
+ion-slide p {
+  font-size: 16px;
+}
+
+ion-slide a {
+  color: var(--ion-color-tertiary);
+}
+
+.max-400 {
+  max-width: 400px;
+}
+
+img.square-pic {
+  max-width: 300px;
+  position: relative;
+  top: 37px;
+}
+
+img.logo-large {
+  max-width: 240px;
+    position: relative;
+    top: 32px;
+}
+
+ion-toolbar {
+  position: absolute;
+  bottom: 0;
+  --background: transparent;
+  --ion-safe-area-left: 16px;
+  --ion-safe-area-right: 16px;
+}
+
+ion-toolbar ion-buttons ion-button {
+  font-size: 14px;
+  --color: var(--ion-color-tertiary);
+}
+
+ion-slides {
+  height: 100%;
+}
+
+ion-slide ion-button.button-block {
+  width: 100%;
+}
+
+ion-toolbar {
+  --min-height: 60px;
+}
+
+
+.buttons-radius{
+  border-radius: 5rem !important;
+}

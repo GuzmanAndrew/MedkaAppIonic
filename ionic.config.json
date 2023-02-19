@@ -1,0 +1,7 @@
+{
+  "name": "Bmed",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

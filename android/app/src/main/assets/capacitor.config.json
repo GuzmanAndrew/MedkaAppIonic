@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.bmed",
+	"appName": "Bmed App",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

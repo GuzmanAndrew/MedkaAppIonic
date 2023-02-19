@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "13064028989",
+    "project_id": "bmedapp",
+    "storage_bucket": "bmedapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:13064028989:android:c2375824bf45a9b4323b54",
+        "android_client_info": {
+          "package_name": "io.ionic.bmed"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "13064028989-rnatsrebkofabg94talfnl9kf0jhbivg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5_M8k45VCzekwjhmbFLC1sReCJI_UJCQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "13064028989-rnatsrebkofabg94talfnl9kf0jhbivg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

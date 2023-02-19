@@ -1,0 +1,13 @@
+<ion-content mode="ios" class="ion-padding">
+  <img class="logo-large" src="assets/logo-large.png" alt="Bmed Large Logo">
+  <h1>{{message}}</h1>
+  <ion-spinner *ngIf="modeUI === 'verify'" name="bubbles" color="medium"></ion-spinner>
+  <!-- Reset password form -->
+  <form *ngIf="modeUI === 'resetPassword'" [formGroup]="changePasswordForm" (ngSubmit)="handlePasswordReset()">
+    <ion-input formControlName="password" type="password" placeholder="Nueva contraseña"></ion-input>
+    <button type="submit" [disabled]="!changePasswordForm.valid" class="ion-hide">Cambiar contraseña</button>
+    <ion-button type="submit" [disabled]="!changePasswordForm.valid" expand="block">
+      Cambiar contraseña
+    </ion-button>
+  </form>
+</ion-content>

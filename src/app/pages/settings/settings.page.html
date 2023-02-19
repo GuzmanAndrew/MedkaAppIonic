@@ -1,0 +1,17 @@
+<ion-header>
+  <app-custom-header title="Perfil" subtitle="Configuración"></app-custom-header>
+</ion-header>
+
+<ion-content mode="ios">
+  <ion-list>
+    <ion-item routerLink="/profile" detail="true">
+      <ion-label>Perfil</ion-label>
+    </ion-item>
+    <ion-item routerLink="/help" detail="true">
+      <ion-label>Ayuda</ion-label>
+    </ion-item>
+    <ion-item (click)="logout()" detail="true">
+      <ion-label>Cerrar sesión</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

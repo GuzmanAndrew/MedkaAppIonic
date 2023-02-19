@@ -1,0 +1,31 @@
+<ion-toolbar class="custom-header-toolbar" mode="md">
+  <ion-buttons *ngIf="backButton" slot="start">
+    <ion-back-button [defaultHref]="defaultBackHref" icon="chevron-back"></ion-back-button>
+  </ion-buttons>
+  <ion-buttons *ngIf="backAction" slot="start">
+    <ion-button (click)="backAction()">
+      <ion-icon slot="icon-only" name="close"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+  <ion-title>
+    <ion-grid no-padding>
+      <ion-row>
+        <ion-col size-sm="6">
+          <p *ngIf="subtitle">{{subtitle}}</p>
+          <p>{{title}}</p>
+        </ion-col>
+        <ion-col  size-sm="6">
+          <ion-avatar  class="ion-float-right">
+            <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+          </ion-avatar>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-title>
+</ion-toolbar>
+
+<div class="custom-header-piece">
+  <svg>
+    <rect width="100%" height="16" style="fill: #ffffff" />
+  </svg>
+</div>
