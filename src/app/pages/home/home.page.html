@@ -1,8 +1,5 @@
 <ion-header>
-  <app-custom-header
-    title="Bienvenido"
-    [subtitle]="'Hola, '+userName"
-  ></app-custom-header>
+  <app-custom-header title="Bienvenido" [subtitle]="'Hola, '+userName"></app-custom-header>
 </ion-header>
 
 <ion-content mode="ios">
@@ -16,14 +13,11 @@
       </ion-col>
     </ion-row> -->
     <ion-row>
-      <ion-col size="6" *ngFor="let link of links">
+      <ion-col *ngFor="let link of links">
         <ion-card class="cards-home">
-          <ion-card-content [routerLink]="link.url" class="ion-no-margin ion-no-padding">
-            <!-- <ion-icon [name]="link.icon.name" [color]="link.icon.color"></ion-icon> -->
-            <img [src]="link.img" width="100px" height="100px" class="ion-margin"/>
-            <h4 class="ion-text-center">
-              <b>{{link.title}}</b>
-            </h4>
+          <ion-card-content [routerLink]="link.url">
+            <ion-icon [name]="link.icon.name" [color]="link.icon.color"></ion-icon>
+            {{link.title}}
           </ion-card-content>
         </ion-card>
       </ion-col>

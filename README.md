@@ -1,6 +1,6 @@
-# medka-app
+# bmed-app
 
-medka: Aplicación de monitoreo
+Bmed: Aplicación de monitoreo
 
 ## Instalación local
 

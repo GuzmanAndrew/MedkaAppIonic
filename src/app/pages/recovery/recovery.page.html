@@ -4,7 +4,7 @@
   <form [formGroup]="recoveryForm" (ngSubmit)="handleRecovery()">
     <ion-input formControlName="email" type="email" placeholder="Correo"></ion-input>
     <ion-input formControlName="password" type="password" placeholder="contraseña"></ion-input>
-    <ion-button type="submit" [disabled]="!recoveryForm.valid" expand="block" color="secondary">
+    <ion-button type="submit" [disabled]="!recoveryForm.valid" expand="block">
       Cambiar contraseña
     </ion-button>
   </form>

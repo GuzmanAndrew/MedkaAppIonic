@@ -77,7 +77,6 @@ export class ProfilePage {
           duration: 1500,
           color: 'success'
         }).then(t => t.present());
-        this.profileForm;
       },
       err => {
         this.toast.create({

@@ -1,7 +1,7 @@
 /**
  * Tipo de medicion
  */
-export type TrackingType = 'frecuenciaCardiaca' | 'presionArterial' | 'temperaturaCorporal' | 'oxigenoSangre' | 'glucometria';
+export type TrackingType = 'frecuenciaCardiaca' | 'presionArterial' | 'temperaturaCorporal' | 'oxigenoSangre';
 
 /**
  * Formulario básico de datos
@@ -16,8 +16,6 @@ export interface CommonRawForm {
   diastolica?: string | number;
   // Temperatira
   temperatura?: string | number;
-  // Glucometria
-  glucometria?: string | number;
 }
 
 /**

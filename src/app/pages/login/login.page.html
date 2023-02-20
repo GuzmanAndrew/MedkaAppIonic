@@ -1,10 +1,10 @@
 <ion-content mode="ios" class="ion-padding">
-  <img class="logo-large" src="assets/logo-large.png" alt="Bmed Large Logo">
+  <img class="logo-large" src="assets/logo-bmedcompleto.png" alt="Bmed Large Logo">
   <h1>Iniciar sesión</h1>
   <form [formGroup]="loginForm" (ngSubmit)="handleLogin()">
     <ion-input formControlName="nombreUsuario" type="text" placeholder="Nombre usuario"></ion-input>
     <ion-input formControlName="password" type="password" placeholder="Contraseña"></ion-input>
-    <!-- <button type="submit" [disabled]="!loginForm.valid" class="ion-hide">Iniciar sesión</button> -->
+    <button type="submit" [disabled]="!loginForm.valid" class="ion-hide">Iniciar sesión</button>
     <ion-button style="--background: #114058 !important" type="submit" [disabled]="!loginForm.valid" expand="block">
       Iniciar sesión
     </ion-button>

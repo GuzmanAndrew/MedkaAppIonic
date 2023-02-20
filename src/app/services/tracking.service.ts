@@ -38,9 +38,6 @@ export class TrackingService {
     if (type === 'oxigenoSangre') {
       endpoint = `${apiUrl}/api/oxi/save`;
     }
-    if (type === 'glucometria') {
-      endpoint = `${apiUrl}/api/gluco/save`;
-    }
     if (Capacitor.isNativePlatform()) {
       // Native
       const token = this.auth.currentToken;
@@ -73,9 +70,6 @@ export class TrackingService {
     }
     if (type === 'oxigenoSangre') {
       endpoint = `${apiUrl}/api/oxi/user/${id}`;
-    }
-    if (type === 'glucometria') {
-      endpoint = `${apiUrl}/api/gluco/save`;
     }
     if (Capacitor.isNativePlatform()) {
       // Native

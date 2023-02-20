@@ -2,19 +2,13 @@
   <ion-tabs>
     <ion-tab-bar slot="bottom">
       <ion-tab-button tab="home">
-        <ion-icon name="home-sharp" routerLink="/home"></ion-icon>
+        <ion-icon [name]="isUrlActive('/home')  ? 'home' : 'home-outline'"></ion-icon>
+        <ion-label>Home</ion-label>
       </ion-tab-button>
-    </ion-tab-bar>
-    <ion-tab-bar slot="bottom" class="no-border">
       <ion-tab-button tab="settings">
-        <ion-icon  [name]="isUrlActive('/settings')  ? 'person' : 'cog-outline'"></ion-icon>
-        <ion-label>Configuracion</ion-label>
-      </ion-tab-button>
-      <ion-tab-button tab="profile">
-        <ion-icon  [name]="isUrlActive('/profile')  ? 'person' : 'person-circle-outline'"></ion-icon>
+        <ion-icon [name]="isUrlActive('/settings')  ? 'person' : 'person-outline'"></ion-icon>
         <ion-label>Perfil</ion-label>
       </ion-tab-button>
     </ion-tab-bar>
   </ion-tabs>
-  
 </ion-router-outlet>

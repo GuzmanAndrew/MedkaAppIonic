@@ -2,7 +2,7 @@
   <app-custom-header [backButton]="true" defaultBackHref="/settings" title="Perfil"></app-custom-header>
 </ion-header>
 
-<ion-content>
+<ion-content mode="ios">
   <ion-card class="sombra">
     <ion-card-header>
       <ion-card-title>{{ name }} {{ last_name }}</ion-card-title>
@@ -12,10 +12,6 @@
   </ion-card>
 
   <form [formGroup]="profileForm" (ngSubmit)="update()">
-    <ion-item>
-      <ion-label position="stacked">Correo</ion-label>
-      <ion-input formControlName="email" type="email" placeholder="Ingrese valor"></ion-input>
-    </ion-item>
     <ion-item>
       <ion-label position="stacked">Teléfono</ion-label>
       <ion-input formControlName="celular" placeholder="Ingrese valor" type="text"></ion-input>
@@ -27,6 +23,10 @@
     <ion-item>
       <ion-label position="stacked">Edad</ion-label>
       <ion-input formControlName="edad" placeholder="Ingrese valor" type="number"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Correo</ion-label>
+      <ion-input formControlName="email" type="email" placeholder="Ingrese valor"></ion-input>
     </ion-item>
     <!-- <ion-item>
       <ion-label position="stacked">Nueva Contraseña</ion-label>
